@@ -1,5 +1,12 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-createApp(App).mount('#app')
+import './assets/css/normalize.css';
+import './assets/css/skeleton.css';
+
+const app = createApp(App);
+
+app.config.globalProperties.url = 'https://mongoterrormoviesite.netlify.app/';
+
+app.use(router).mount("#app");
